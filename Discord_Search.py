@@ -7,7 +7,7 @@ import discord
 
 client = discord.Client()
 
-TOKEN = client.login(process.env.BOT_TOKEN);
+TOKEN = 'NTQ2MTIxMTgyMjk0ODM1MjEw.D0jmmg.EW2sBmhkW452XZe7jYhIT76SirQ';
 
 
 url = 'http://wiki.mabinogiworld.com/api.php'

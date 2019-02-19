@@ -1,8 +1,4 @@
-import logging
 import requests
-
-logging.basicConfig(level=logging.INFO)
-
 import discord
 
 client = discord.Client()

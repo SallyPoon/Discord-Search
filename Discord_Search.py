@@ -21,7 +21,8 @@ def searchWiki(query):
     		"limit": 5,
     		"suggest": True,})
     results = response.json()
-    string = "\n".join("{}".format("["+text+"]("+url+')') for text, url in zip(results[1], results[links]))
+    string = "\n".join("{}".format("["+text+"]("+url+')')for text, url
+    in zip(results[1], results[links]))
     return string
 
 
@@ -33,7 +34,7 @@ async def on_message(message):
         words = words[1:]
         e = discord.Embed(title = words[0], description = searchWiki(words[0]))
         await client.send_message(message.channel, embed = e)
-        #await client.send_message(message.channel, results)
+
 
 @client.event
 async def on_ready():

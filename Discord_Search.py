@@ -21,10 +21,8 @@ def searchWiki(query):
     		"limit": 5,
     		"suggest": True,})
     results = response.json()
-    string = "\n".join("{} {}".format(text, url) for text, url in zip(results[1], results[links]))
+    string = "\n".join("{}".format("["+text+"]("+url+')') for text, url in zip(results[1], results[links]))
     return string
-            # http://wiki.mabinogiworld.com/api.php?action=opensearch&
-            # format=json&search=query&namespace=0&limit=10&suggest=True)
 
 
 

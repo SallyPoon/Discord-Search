@@ -22,10 +22,6 @@ def searchWiki(query):
     		"suggest": True,})
     results = response.json()
     string = "\n".join("{} {}".format(text, url) for text, url in zip(results[1], results[links]))
-        # string = "\n".join("{} {}".format(b))
-        # string = "\n".join("{} {}".format(c))
-        # string = "\n".join("{} {}".format(d))
-        # string = "\n".join("{} {}".format(e))
     return string
             # http://wiki.mabinogiworld.com/api.php?action=opensearch&
             # format=json&search=query&namespace=0&limit=10&suggest=True)
@@ -37,7 +33,8 @@ async def on_message(message):
     if message.content.startswith('$search'):
         words =  message.content.split(maxsplit = 1)
         words = words[1:]
-        await client.send_message(message.channel, searchWiki(words[0]))
+        e = discord.Embed(title = words[0], description = searchWiki(words[0]))
+        await client.send_message(message.channel, embed = e)
         #await client.send_message(message.channel, results)
 
 @client.event

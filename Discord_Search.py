@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 import discord
 
 
-TOKEN = 'NTQ2MTIxMTgyMjk0ODM1MjEw.D0jmmg.EW2sBmhkW452XZe7jYhIT76SirQ'
+TOKEN = client.login(process.env.BOT_TOKEN);
 
 client = discord.Client()
 

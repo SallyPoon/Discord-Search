@@ -5,10 +5,10 @@ logging.basicConfig(level=logging.INFO)
 
 import discord
 
+client = discord.Client()
 
 TOKEN = client.login(process.env.BOT_TOKEN);
 
-client = discord.Client()
 
 url = 'http://wiki.mabinogiworld.com/api.php'
 def searchWiki(query):

@@ -28,6 +28,8 @@ async def on_message(message):
         words = words[1:]
         e = discord.Embed(title = words[0], description = searchWiki(words[0]))
         await client.send_message(message.channel, embed = e)
+    if message.content.startswith('$help'):
+        print('$search [item] - will grab top five searches from wiki')
 
 
 @client.event

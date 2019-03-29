@@ -3,8 +3,6 @@ import discord
 
 client = discord.Client()
 
-TOKEN = 'NTQ2MTIxMTgyMjk0ODM1MjEw.D0jmmg.EW2sBmhkW452XZe7jYhIT76SirQ';
-
 
 url = 'http://wiki.mabinogiworld.com/api.php'
 def searchWiki(query):
@@ -39,4 +37,6 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run(TOKEN)
+if __name__ == '__main__':
+    import config
+    client.run(config.token)

@@ -4,6 +4,7 @@ import discord
 client = discord.Client()
 
 
+
 url = 'http://wiki.mabinogiworld.com/api.php'
 def searchWiki(query):
     links = 3
